@@ -11,10 +11,7 @@
     }, {
       "matchManagers": ["github-actions"],
       "groupName": "actions"
-    }
-  ],
-  "packageRules": [
-    {
+    }, {
       "matchPackageNames": ["juju"],
       "allowedVersions": "<3.0.0"
     }
