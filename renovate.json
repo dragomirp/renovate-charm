@@ -20,7 +20,7 @@
     {
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
       "matchStrings": ["bootstrap-options: \"--agent-version (?<currentValue>.*?)\" # Latest 2.9"],
-      "depNameTemplate": "https://github.com/juju/juju",
+      "depNameTemplate": "juju/juju",
       "packageNameTemplate": "juju",
       "datasourceTemplate": "github-releases"
     }
