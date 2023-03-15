@@ -12,7 +12,7 @@
       "matchManagers": ["github-actions"],
       "groupName": "actions"
     }, {
-      "matchPackageNames": ["juju"],
+      "matchPackageNames": ["juju/juju"],
       "allowedVersions": "<3.0.0"
     }
   ],
@@ -21,7 +21,6 @@
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
       "matchStrings": ["bootstrap-options: \"--agent-version (?<currentValue>.*?)\" # Latest 2.9"],
       "depNameTemplate": "juju/juju",
-      "packageNameTemplate": "juju",
       "datasourceTemplate": "github-releases"
     }
   ],
