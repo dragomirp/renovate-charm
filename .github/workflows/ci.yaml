@@ -12,7 +12,6 @@ on:
       - '.gitignore'
       - '.jujuignore'
       - 'LICENSE'
-      - '**.md'
   workflow_call:
 
 jobs:
