@@ -3,7 +3,7 @@
   "extends": [
     "config:base"
   ],
-  "enabledManagers": ["poetry", "github-actions"],
+  "enabledManagers": ["poetry", "github-actions", "regex"],
   "packageRules": [
     {
       "matchManagers": ["poetry"],
@@ -11,6 +11,21 @@
     }, {
       "matchManagers": ["github-actions"],
       "groupName": "actions"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["juju"],
+      "allowedVersions": "<3.0.0"
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
+      "matchStrings": ["bootstrap-options: \"--agent-version (?<currentValue>.*?)\" # Latest 2.9"],
+      "depNameTemplate": "https://github.com/juju/juju",
+      "packageName": "juju",
+      "datasourceTemplate": "github-releases"
     }
   ],
   "ignoreDeps": []
