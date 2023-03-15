@@ -3,5 +3,6 @@
   "extends": [
     "config:base"
   ],
-  "enabledManagers": ["poetry", "github-actions"]
+  "enabledManagers": ["poetry", "github-actions"],
+  "ignoreDeps": []
 }
