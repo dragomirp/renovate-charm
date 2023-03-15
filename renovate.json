@@ -4,7 +4,7 @@
     "config:base"
   ],
   "enabledManagers": ["poetry", "github-actions"],
-  "packageRules" [
+  "packageRules"L [
     {
       "matchManagers": ["poetry"],
       "groupName": "python"
