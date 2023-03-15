@@ -1344,14 +1344,14 @@ testing = ["coverage (>=6.2)", "flaky (>=3.5.0)", "hypothesis (>=5.7.1)", "mypy 
 
 [[package]]
 name = "pytest-operator"
-version = "0.23.0"
+version = "0.24.0"
 description = "Fixtures for Operators"
 category = "dev"
 optional = false
 python-versions = "*"
 files = [
-    {file = "pytest-operator-0.23.0.tar.gz", hash = "sha256:fa4537ce14b01d33be90b233e6aa65e619afbf2c1596b270ee477cf144e9a344"},
-    {file = "pytest_operator-0.23.0-py3-none-any.whl", hash = "sha256:fecbda8c0f242cee25af50f0e8d5f67c26ad67490cda21d1651698619e2f1bda"},
+    {file = "pytest-operator-0.24.0.tar.gz", hash = "sha256:679197213f3023cfe99a932bbae5ef4d4833619a4de434fbba4fe1c6afa449e3"},
+    {file = "pytest_operator-0.24.0-py3-none-any.whl", hash = "sha256:17451584d17b380ce13863b986535c5dff26e24a8d7c7967b27b006b20d1d2d3"},
 ]
 
 [package.dependencies]
@@ -1876,4 +1876,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.10"
-content-hash = "b8f264a05dd4cd821de6ed5f32d481c571a13f244ea96d54a4e3650cf075152c"
+content-hash = "55e57ca7e7998fc4ac7d211f38bb26bc950448330f83494286d5ff0ff043ea04"
