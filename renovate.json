@@ -4,5 +4,14 @@
     "config:base"
   ],
   "enabledManagers": ["poetry", "github-actions"],
+  "packageRules" [
+    {
+      "matchManagers": ["poetry"],
+      "groupName": "python"
+    }, {
+      "matchManagers": ["github-actions"],
+      "groupName": "actions"
+    }
+  ],
   "ignoreDeps": []
 }
