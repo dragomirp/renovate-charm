@@ -3,7 +3,8 @@
 name: Renovate
 
 on:
-  pull_request_target:
+  pull_request:
+  workflow_run:
     branches:
       - 'renovate/**'
 
