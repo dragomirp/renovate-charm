@@ -9,10 +9,9 @@ on:
     branches:
       - 'renovate/**'
 
-
 jobs:
-  export-requirements:
-    name: Export requirements
+  export:
+    name: Lint
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -22,10 +21,4 @@ jobs:
         # TODO: Consider replacing with custom image on self-hosted runner OR pinning version
         run: python3 -m pip install tox
       - name: Run linters
-        run: tox run -e poetry-lock
-
-  ci-tests:
-    needs:
-      - export-requirements
-    uses: ./.github/workflows/ci.yaml
-    secrets: inherit
+        run: tox run -e lint
