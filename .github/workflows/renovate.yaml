@@ -3,12 +3,6 @@
 name: Renovate
 
 on:
-  pull_request:
-    paths-ignore:
-      - '.gitignore'
-      - '.jujuignore'
-      - 'LICENSE'
-      - '**.md'
   push:
     branches:
       - 'renovate/**'
