@@ -1,3 +1,6 @@
+leftpad==0.1.1 ; python_full_version >= "3.8.10" and python_full_version < "4.0.0" \
+    --hash=sha256:7cd9c90d9781c23d21ff894d2fb424f299e9459876f5e16bd34727d8579cc5a5 \
+    --hash=sha256:f87cf4b24b3f2cd1e4bc7cd814eba3e9cdc039c3e6ce6a5613c3de0e4f2ff25e
 ops==2.1.1 ; python_full_version >= "3.8.10" and python_full_version < "4.0.0" \
     --hash=sha256:b2802068557c64121bf50ccfe101b043ed08c02ac5f958e55752c476b09de63d \
     --hash=sha256:bed9f14b785efaa83f89b9c76b87bd1b3b82b0350c453b41dce778b39c7410b4

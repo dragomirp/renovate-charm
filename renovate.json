@@ -6,6 +6,8 @@
   // Can use team:
   "reviewers": ["dragomirp"],
   "enabledManagers": ["poetry", "pip_requirements", "github-actions", "regex"],
+  //Schedule
+  "schedule": ["0 13 * * *"],
   "packageRules": [
     {
       // Roll python deps in one go
@@ -17,7 +19,7 @@
     }, {
       // Update juju om release should add a comment to update only the ones we want
       "matchPackageNames": ["juju/juju"],
-      "allowedVersions": ">=3.0.0",
+      "allowedVersions": "<3.0.0",
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju release"
     }
@@ -25,6 +27,7 @@
   "regexManagers": [
     {
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
+      // Need the Latest comment so that we can hold other versions as needed
       "matchStrings": ["bootstrap-options: \"--agent-version (?<currentValue>.*?)\" # Latest"],
       "depNameTemplate": "juju/juju",
       "datasourceTemplate": "github-releases",
@@ -32,5 +35,6 @@
       "extractVersionTemplate": "Juju release"
     }
   ],
+  // If we want to hold things we can add them here
   "ignoreDeps": []
 }
