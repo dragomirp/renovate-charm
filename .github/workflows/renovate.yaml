@@ -25,6 +25,6 @@ jobs:
 
   ci-tests:
     needs:
-      - export-requirements
+      - export
     uses: ./.github/workflows/ci.yaml
     secrets: inherit

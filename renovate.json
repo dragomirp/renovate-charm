@@ -3,6 +3,7 @@
   "extends": [
     "config:base"
   ],
+  "reviewers": ["dragomirp"],
   "enabledManagers": ["poetry", "github-actions", "regex"],
   "packageRules": [
     {
