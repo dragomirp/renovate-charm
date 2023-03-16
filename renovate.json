@@ -7,7 +7,8 @@
   "reviewers": ["dragomirp"],
   "enabledManagers": ["poetry", "pip_requirements", "github-actions", "regex"],
   //Schedule once a day
-  "schedule": ["* 13 * * *"],
+  "schedule": ["after 4pm and before 6pm every weekday"],
+  "timezone": "Etc/UTC",
   "packageRules": [
     {
       // Roll python deps in one go
