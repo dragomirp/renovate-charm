@@ -14,6 +14,8 @@
     }, {
       "matchPackageNames": ["juju/juju"],
       "allowedVersions": "<3.0.0"
+      "extractVersion": "^juju-(?<version>.*)$",
+      "groupName": "juju-release"
     }
   ],
   "regexManagers": [
@@ -22,7 +24,8 @@
       "matchStrings": ["bootstrap-options: \"--agent-version (?<currentValue>.*?)\" # Latest 2.9"],
       "depNameTemplate": "juju/juju",
       "datasourceTemplate": "github-releases",
-      "versioningTemplate": "regex:^juju-(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)?$"
+      "versioningTemplate": "loose",
+      "extractVersionTemplate": "juju-release"
     }
   ],
   "ignoreDeps": []
