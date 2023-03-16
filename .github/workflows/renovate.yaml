@@ -1,4 +1,4 @@
-name: Renovate
+name: Renovate requirements
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
