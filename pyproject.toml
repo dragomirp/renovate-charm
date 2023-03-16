@@ -8,8 +8,8 @@ license = "Apache-2.0"
 [tool.poetry.dependencies]
 python = "^3.8.10"
 ops = "2.1.1"
-simplejson = "3.18.2"
-pydantic = "1.9.2"
+simplejson = "3.18.4"
+pydantic = "1.10.6"
 
 [tool.poetry.group.format]
 optional = true
