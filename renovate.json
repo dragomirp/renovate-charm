@@ -6,8 +6,8 @@
   // Can use team:
   "reviewers": ["dragomirp"],
   "enabledManagers": ["poetry", "pip_requirements", "github-actions", "regex"],
-  //Schedule
-  "schedule": ["0 13 * * *"],
+  //Schedule once a day
+  "schedule": ["* 13 * * *"],
   "packageRules": [
     {
       // Roll python deps in one go
