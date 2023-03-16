@@ -12,6 +12,8 @@ on:
       - '.gitignore'
       - '.jujuignore'
       - 'LICENSE'
+    branches-ignore:
+      - 'renovate/*'
   workflow_call:
 
 jobs:
