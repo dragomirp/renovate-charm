@@ -1,4 +1,4 @@
-name: Update renovate exports and libs
+name: Renovate
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -8,11 +8,10 @@ on:
   pull_request:
     branches:
       - 'renovate/**'
-  workflow_call:
 
 jobs:
   export:
-    name: Export requirements
+    name: 'Export requirements'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
