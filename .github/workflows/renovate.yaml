@@ -15,7 +15,7 @@ on:
       - 'renovate/**'
 
 jobs:
-  export:
+  export-requirements:
     name: Export requirements
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -30,6 +30,6 @@ jobs:
 
   ci-tests:
     needs:
-      - export
+      - export-requirements
     uses: ./.github/workflows/ci.yaml
     secrets: inherit
