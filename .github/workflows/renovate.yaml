@@ -3,7 +3,9 @@
 name: Renovate
 
 on:
-  push:
+  pull_request:
+    types:
+      - opened
     branches:
       - 'renovate/**'
 
