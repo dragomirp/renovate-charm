@@ -6,6 +6,10 @@ concurrency:
 
 on:
   pull_request:
+    paths-ignore:
+      - '.gitignore'
+      - '.jujuignore'
+      - 'LICENSE'
     branches:
       - 'renovate/**'
 
