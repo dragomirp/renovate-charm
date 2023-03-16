@@ -4,8 +4,6 @@ name: Renovate
 
 on:
   pull_request:
-    types:
-      - opened
     branches:
       - 'renovate/**'
 
