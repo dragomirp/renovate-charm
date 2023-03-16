@@ -9,6 +9,7 @@ on:
       - '.jujuignore'
       - 'LICENSE'
       - '**.md'
+  push:
     branches:
       - 'renovate/**'
 
