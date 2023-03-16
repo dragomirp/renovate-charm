@@ -8,15 +8,15 @@
   "packageRules": [
     {
       "matchManagers": ["poetry"],
-      "groupName": "python"
+      "groupName": "Python dependencies"
     }, {
       "matchManagers": ["github-actions"],
-      "groupName": "actions"
+      "groupName": "Github actions"
     }, {
       "matchPackageNames": ["juju/juju"],
       "allowedVersions": "<3.0.0",
       "extractVersion": "^juju-(?<version>.*)$",
-      "groupName": "juju-release"
+      "groupName": "Juju release"
     }
   ],
   "regexManagers": [
@@ -26,7 +26,7 @@
       "depNameTemplate": "juju/juju",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "loose",
-      "extractVersionTemplate": "juju-release"
+      "extractVersionTemplate": "Juju release"
     }
   ],
   "ignoreDeps": []
