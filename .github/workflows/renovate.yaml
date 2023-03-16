@@ -8,8 +8,8 @@ concurrency:
 on:
   pull_request:
     branches:
-      - 'renovate/*'
-      
+      - 'renovate/**'
+
 jobs:
   export-requirements:
     name: Export requirements
