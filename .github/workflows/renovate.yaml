@@ -1,4 +1,4 @@
-name: Renovate requirements
+name:  Update renovate exports and libs
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
