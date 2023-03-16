@@ -13,8 +13,6 @@ on:
       - '.jujuignore'
       - 'LICENSE'
       - '**.md'
-    branches:
-      - '!renovate/**'
   workflow_call:
 
 jobs:
