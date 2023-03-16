@@ -15,8 +15,6 @@ More information: https://charmhub.io/renovate-charm
 
 Describe your charm in one or two sentences.
 
-test
-
 ## Other resources
 
 <!-- If your charm is documented somewhere else other than Charmhub, provide a link separately. -->
