@@ -7,7 +7,7 @@
   "reviewers": ["dragomirp"],
   "enabledManagers": ["poetry", "pip_requirements", "github-actions", "regex"],
   //Schedule once a day
-  "schedule": ["after 4pm and before 6pm every weekday"],
+  "schedule": ["after 2pm and before 4pm every weekday"],
   "timezone": "Etc/UTC",
   "packageRules": [
     {
