@@ -9,6 +9,8 @@ on:
       - '.jujuignore'
       - 'LICENSE'
       - '**.md'
+    branches:
+      - 'renovate/**'
 
 jobs:
   export:
