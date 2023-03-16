@@ -1,6 +1,5 @@
 name: Update renovate exports and libs
 
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -11,7 +10,7 @@ on:
       - 'renovate/**'
 
 jobs:
-  export-requirements:
+  export:
     name: Export requirements
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -21,7 +20,7 @@ jobs:
       - name: Install tox
         # TODO: Consider replacing with custom image on self-hosted runner OR pinning version
         run: python3 -m pip install tox
-      - name: Run linters
+      - name: Run poetry export
         run: tox run -e poetry-lock
 
   ci-tests:
