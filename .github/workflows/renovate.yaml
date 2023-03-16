@@ -20,5 +20,11 @@ jobs:
       - name: Install tox
         # TODO: Consider replacing with custom image on self-hosted runner OR pinning version
         run: python3 -m pip install tox
-      - name: Run linters
-        run: tox run -e lint
+      - name: Run poetry export
+        run: tox run -e poetry-lock
+
+  ci-tests:
+    needs:
+      - export-requirements
+    uses: ./.github/workflows/ci.yaml
+    secrets: inherit
