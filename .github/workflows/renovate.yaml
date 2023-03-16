@@ -10,6 +10,7 @@ on:
       - '.gitignore'
       - '.jujuignore'
       - 'LICENSE'
+      - '**.md'
     branches:
       - 'renovate/**'
 
