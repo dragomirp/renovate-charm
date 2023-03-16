@@ -20,7 +20,8 @@ jobs:
         run: python3 -m pip install tox
       - name: Run poetry export
         run: tox run -e poetry-lock
-      - name: Commit report
+      - name: Commit updates
+        continue-on-error: true
         run: |
           git config --global user.name 'Auto Magic'
           git config --global user.email 'your-username@users.noreply.github.com'
