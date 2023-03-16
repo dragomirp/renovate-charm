@@ -1,11 +1,9 @@
+# Copyright 2022 Canonical Ltd.
+# See LICENSE file for licensing details.
 name: Update renovate exports and libs
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 on:
-  pull_request:
+  push:
     branches:
       - 'renovate/**'
 
@@ -22,6 +20,18 @@ jobs:
         run: python3 -m pip install tox
       - name: Run poetry export
         run: tox run -e poetry-lock
+      - name: Check libs
+        uses: canonical/charming-actions/check-libraries@2.2.2
+        with:
+          credentials: "${{ secrets.CHARMHUB_TOKEN }}"
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Commit updates
+        continue-on-error: true
+        run: |
+          git config --global user.name 'Auto Magic'
+          git config --global user.email 'your-username@users.noreply.github.com'
+          git commit -am "export requirements"
+          git push
 
   ci-tests:
     needs:

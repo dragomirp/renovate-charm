@@ -12,6 +12,7 @@ on:
       - '.gitignore'
       - '.jujuignore'
       - 'LICENSE'
+      - '**.md'
     branches:
       - '!renovate/**'
   workflow_call:
