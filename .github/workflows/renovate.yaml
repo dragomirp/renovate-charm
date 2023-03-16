@@ -3,8 +3,7 @@
 name: Renovate
 
 on:
-  pull_request:
-  workflow_run:
+  push:
     branches:
       - 'renovate/**'
 
@@ -21,6 +20,12 @@ jobs:
         run: python3 -m pip install tox
       - name: Run poetry export
         run: tox run -e poetry-lock
+      - name: Commit report
+        run: |
+          git config --global user.name 'Auto Magic'
+          git config --global user.email 'your-username@users.noreply.github.com'
+          git commit -am "export requirements"
+          git push
 
   ci-tests:
     needs:
