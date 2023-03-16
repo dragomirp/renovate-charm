@@ -1,9 +1,5 @@
 name:  Update renovate exports and libs
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 on:
   pull_request:
     branches:
