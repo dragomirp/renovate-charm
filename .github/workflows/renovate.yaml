@@ -20,6 +20,11 @@ jobs:
         run: python3 -m pip install tox
       - name: Run poetry export
         run: tox run -e poetry-lock
+      - name: Check libs
+        uses: canonical/charming-actions/check-libraries@2.2.2
+        with:
+          credentials: "${{ secrets.CHARMHUB_TOKEN }}"
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: Commit updates
         continue-on-error: true
         run: |
