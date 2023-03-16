@@ -1,0 +1,11 @@
+name: Update renovate exports and libs
+
+on:
+  push:
+    branches:
+      - "renovate/*"
+
+jobs:
+  ci-tests:
+    uses: ./.github/workflows/ci.yaml
+    secrets: inherit
