@@ -7,11 +7,11 @@ concurrency:
 on:
   pull_request:
     branches:
-      - 'renovate/**'
+      - 'renovate/test'
 
 jobs:
   export:
-    name: Lint
+    name: Export requirements
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
