@@ -3,18 +3,21 @@
   "extends": [
     "config:base"
   ],
+  // Can use team:
   "reviewers": ["dragomirp"],
-  "enabledManagers": ["poetry", "github-actions", "regex"],
+  "enabledManagers": ["poetry", "pip_requirements", "github-actions", "regex"],
   "packageRules": [
     {
-      "matchManagers": ["poetry"],
+      // Roll python deps in one go
+      "matchManagers": ["poetry", "pip_requirements"],
       "groupName": "Python dependencies"
     }, {
       "matchManagers": ["github-actions"],
       "groupName": "Github actions"
     }, {
+      // Update juju om release should add a comment to update only the ones we want
       "matchPackageNames": ["juju/juju"],
-      "allowedVersions": "<3.0.0",
+      "allowedVersions": ">=3.0.0",
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju release"
     }
@@ -22,7 +25,7 @@
   "regexManagers": [
     {
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
-      "matchStrings": ["bootstrap-options: \"--agent-version (?<currentValue>.*?)\" # Latest 2.9"],
+      "matchStrings": ["bootstrap-options: \"--agent-version (?<currentValue>.*?)\" # Latest"],
       "depNameTemplate": "juju/juju",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "loose",
