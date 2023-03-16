@@ -1,6 +1,5 @@
 name: Update renovate exports and libs
 
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -23,3 +22,9 @@ jobs:
         run: python3 -m pip install tox
       - name: Run linters
         run: tox run -e poetry-lock
+
+  ci-tests:
+    needs:
+      - export-requirements
+    uses: ./.github/workflows/ci.yaml
+    secrets: inherit
