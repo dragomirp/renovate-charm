@@ -12,8 +12,7 @@
   "packageRules": [
     {
       // Roll python deps in one go
-      "matchManagers": ["poetry", "pip_requirements", "regex"],
-      "matchDatasources": ["pypi"],
+      "matchManagers": ["poetry", "pip_requirements"],
       "groupName": "Python dependencies"
     }, {
       "matchManagers": ["github-actions"],
@@ -27,7 +26,7 @@
     }, {
       "matchPackageNames": ["juju"],
       "matchDatasources": ["pypi"],
-      "allowedVersions": "<3.0.0"
+      "allowedVersions": ">=3.0.0"
     }
   ],
   "regexManagers": [
