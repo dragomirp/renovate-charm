@@ -26,7 +26,7 @@
     }, {
       "matchPackageNames": ["juju"],
       "matchDatasources": ["pypi"],
-      "allowedVersions": ">=3.0.0"
+      "allowedVersions": "<3.0.0"
     }
   ],
   "regexManagers": [
