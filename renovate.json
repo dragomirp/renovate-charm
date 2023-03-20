@@ -7,8 +7,8 @@
   "reviewers": ["dragomirp"],
   "enabledManagers": ["poetry", "pip_requirements", "github-actions", "regex"],
   //Schedule once a day
-  "schedule": ["after 2pm and before 4pm every weekday"],
-  "timezone": "Etc/UTC",
+  //"schedule": ["after 2pm and before 4pm every weekday"],
+  //"timezone": "Etc/UTC",
   "packageRules": [
     {
       // Roll python deps in one go
@@ -23,6 +23,10 @@
       "allowedVersions": "<3.0.0",
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju release"
+    }, {
+      "matchPackageNames": ["juju"],
+      "matchDatasources": ["pypi"],
+      "allowedVersions": "<3.0.0"
     }
   ],
   "regexManagers": [
@@ -34,6 +38,12 @@
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "loose",
       "extractVersionTemplate": "Juju release"
+    }, {
+      "fileMatch": ["(^|/)([\\w-]*)charmcraft\\.ya?ml$"],
+      // Need the Latest comment so that we can hold other versions as needed
+      "matchStrings": ["- (?<depName>.*?)==(?<currentValue>.*?) +# renovate"],
+      "datasourceTemplate": "pypi",
+      "versioningTemplate": "python"
     }
   ],
   // If we want to hold things we can add them here
