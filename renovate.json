@@ -7,12 +7,13 @@
   "reviewers": ["dragomirp"],
   "enabledManagers": ["poetry", "pip_requirements", "github-actions", "regex"],
   //Schedule once a day
-  //"schedule": ["after 2pm and before 4pm every weekday"],
-  //"timezone": "Etc/UTC",
+  "schedule": ["after 2pm and before 4pm every weekday"],
+  "timezone": "Etc/UTC",
   "packageRules": [
     {
       // Roll python deps in one go
-      "matchManagers": ["poetry", "pip_requirements"],
+      "matchManagers": ["poetry", "pip_requirements", "regex"],
+      "matchDatasources": ["pypi"],
       "groupName": "Python dependencies"
     }, {
       "matchManagers": ["github-actions"],
