@@ -12,7 +12,8 @@
   "packageRules": [
     {
       // Roll python deps in one go
-      "matchManagers": ["poetry", "pip_requirements"],
+      "matchManagers": ["poetry", "pip_requirements", "regex"],
+      "matchDatasources": ["pypi"],
       "groupName": "Python dependencies"
     }, {
       "matchManagers": ["github-actions"],
@@ -23,6 +24,9 @@
       "allowedVersions": "<3.0.0",
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju release"
+    }, {
+      "matchPackageNames": ["juju"],
+      "allowedVersions": "<3.0.0"
     }
   ],
   "regexManagers": [
@@ -34,6 +38,12 @@
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "loose",
       "extractVersionTemplate": "Juju release"
+    }, {
+      "fileMatch": ["(^|/)([\\w-]*)charmcraft\\.ya?ml$"],
+      // Need the Latest comment so that we can hold other versions as needed
+      "matchStrings": ["- (?<depName>.*?)==(?<currentValue>.*?) +# renovate"],
+      "datasourceTemplate": "pypi",
+      "versioningTemplate": "python"
     }
   ],
   // If we want to hold things we can add them here
