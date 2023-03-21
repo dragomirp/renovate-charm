@@ -42,13 +42,5 @@
     }
   ],
   "ignoreDeps": [],
-  "ignorePaths": [
-    "**/node_modules/**",
-    "**/bower_components/**",
-    "**/vendor/**",
-    "**/examples/**",
-    "**/__tests__/**",
-    "**/test/**",
-    "**/__fixtures__/**"
-  ]
+  "ignorePaths": []
 }
