@@ -9,7 +9,8 @@
   "timezone": "Etc/UTC",
   "packageRules": [
     {
-      "matchManagers": ["poetry", "pip_requirements"],
+      "matchManagers": ["poetry", "pip_requirements", "regex"],
+      "matchDatasources": ["pypi"],
       "groupName": "Python dependencies"
     }, {
       "matchManagers": ["github-actions"],
