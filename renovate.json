@@ -35,11 +35,20 @@
       "versioningTemplate": "loose",
       "extractVersionTemplate": "Juju release"
     }, {
-      "fileMatch": ["^([\\w-]*)charmcraft\\.ya?ml$"],
+      "fileMatch": ["(^|/)([\\w-]*)charmcraft\\.ya?ml$"],
       "matchStrings": ["- (?<depName>.*?)==(?<currentValue>.*?) +# renovate"],
       "datasourceTemplate": "pypi",
       "versioningTemplate": "loose"
     }
   ],
-  "ignoreDeps": []
+  "ignoreDeps": [],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/examples/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/__fixtures__/**"
+  ]
 }
