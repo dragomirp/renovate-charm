@@ -3,22 +3,18 @@
   "extends": [
     "config:base"
   ],
-  // Can use team:
   "reviewers": ["dragomirp"],
   "enabledManagers": ["poetry", "pip_requirements", "github-actions", "regex"],
-  //Schedule once a day
   "schedule": ["after 2pm and before 4pm every weekday"],
   "timezone": "Etc/UTC",
   "packageRules": [
     {
-      // Roll python deps in one go
       "matchManagers": ["poetry", "pip_requirements"],
       "groupName": "Python dependencies"
     }, {
       "matchManagers": ["github-actions"],
       "groupName": "Github actions"
     }, {
-      // Update juju om release should add a comment to update only the ones we want
       "matchPackageNames": ["juju/juju"],
       "allowedVersions": "<3.0.0",
       "extractVersion": "^juju-(?<version>.*)$",
@@ -32,7 +28,6 @@
   "regexManagers": [
     {
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
-      // Need the Latest comment so that we can hold other versions as needed
       "matchStrings": ["bootstrap-options: \"--agent-version (?<currentValue>.*?)\" # Latest"],
       "depNameTemplate": "juju/juju",
       "datasourceTemplate": "github-releases",
@@ -40,12 +35,10 @@
       "extractVersionTemplate": "Juju release"
     }, {
       "fileMatch": ["(^|/)([\\w-]*)charmcraft\\.ya?ml$"],
-      // Need the Latest comment so that we can hold other versions as needed
       "matchStrings": ["- (?<depName>.*?)==(?<currentValue>.*?) +# renovate"],
       "datasourceTemplate": "pypi",
-      "versioningTemplate": "python"
+      "versioningTemplate": "loose"
     }
   ],
-  // If we want to hold things we can add them here
   "ignoreDeps": []
 }
