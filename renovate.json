@@ -35,7 +35,7 @@
       "versioningTemplate": "loose",
       "extractVersionTemplate": "Juju release"
     }, {
-      "fileMatch": ["(^|/)([\\w-]*)charmcraft\\.ya?ml$"],
+      "fileMatch": ["^([\\w-]*)charmcraft\\.ya?ml$"],
       "matchStrings": ["- (?<depName>.*?)==(?<currentValue>.*?) +# renovate"],
       "datasourceTemplate": "pypi",
       "versioningTemplate": "loose"
