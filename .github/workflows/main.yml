@@ -6,8 +6,12 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'tests/**'
 
 jobs:
   ci-tests:
-    name: Tests
-    run: echo Tada
+    runs-on: ubuntu-latest
+    steps:
+    - name: Tests
+      run: echo Tada
