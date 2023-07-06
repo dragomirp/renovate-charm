@@ -52,10 +52,10 @@ jobs:
       matrix:
         tox-environments:
           - integration
-        agents-version:
+        agent-version:
           - "2.9.43"  # renovate: latest juju 2
           - "3.1.5"  # renovate: latest juju 3
-    name: ${{ matrix.tox-environments }} | ${{ matrix.agents-version }}
+    name: ${{ matrix.tox-environments }} | ${{ matrix.agent-version }}
     needs:
       - lint
       - unit-test
@@ -70,7 +70,10 @@ jobs:
         uses: charmed-kubernetes/actions-operator@main
         with:
           provider: microk8s
-          bootstrap-options: "--agent-version ${{ matrix.agents-version }}"
+          channel: "1.27-strict/stable"
+          bootstrap-options: "--agent-version ${{ matrix.agent-version }}"
+          if: ${{ matrix.agent-version }}
+          juju-channel: "${{ matrix.agent-version[0:2] }}/stable"
       - name: Download packed charm(s)
         uses: actions/download-artifact@v3
         with:
