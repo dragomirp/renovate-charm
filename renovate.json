@@ -14,13 +14,15 @@
       "matchManagers": ["github-actions"],
       "groupName": "Github actions"
     }, {
-      "matchPackageNames": ["juju/juju"],
+      "matchManagers": ["regex"],
+      "matchDatasources": ["github-releases"],
       "allowedVersions": "!3\\.\\d\\.\\d",
       "matchCurrentVersion": "!3\\.\\d\\.\\d",
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju agent"
     }, {
-      "matchPackageNames": ["juju/juju"],
+      "matchManagers": ["regex"],
+      "matchDatasources": ["github-releases"],
       "allowedVersions": "3\\.\\d\\.\\d",
       "matchCurrentVersion": "3\\.\\d\\.\\d",
       "extractVersion": "^juju-(?<version>.*)$",
