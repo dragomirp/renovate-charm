@@ -20,9 +20,10 @@
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju agent"
     }, {
+      "matchManagers": ["regex"],
       "matchPackageNames": ["juju/juju"],
-      "allowedVersions": ">3.0.0",
-      "matchCurrentVersion": ">3.0.0",
+      "matchCurrentVersion": "3\.\d\.\d$",
+      "allowedVersions": "3\.\d\.\d$"
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju agent"
     }, {
