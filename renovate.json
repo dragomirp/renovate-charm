@@ -5,8 +5,6 @@
   ],
   "reviewers": ["dragomirp"],
   "enabledManagers": ["poetry", "pip_requirements", "github-actions", "regex"],
-  "schedule": ["after 2pm and before 4pm every weekday"],
-  "timezone": "Etc/UTC",
   "packageRules": [
     {
       "matchManagers": ["poetry", "pip_requirements", "regex"],
