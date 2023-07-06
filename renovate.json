@@ -14,17 +14,16 @@
       "matchManagers": ["github-actions"],
       "groupName": "Github actions"
     }, {
-      "matchManagers": ["regex"],
-      "matchDatasources": ["github-releases"],
-      "allowedVersions": "!3\\.\\d\\.\\d",
-      "matchCurrentVersion": "!3\\.\\d\\.\\d",
+
+      "matchDepNames": ["juju/juju3"],
+      "matchPackageNames": ["juju/juju"],
+      "allowedVersions": "<3.2.0",
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju agent"
     }, {
-      "matchManagers": ["regex"],
-      "matchDatasources": ["github-releases"],
-      "allowedVersions": "3\\.\\d\\.\\d",
-      "matchCurrentVersion": "3\\.\\d\\.\\d",
+      "matchDepNames": ["juju/juju2"],
+      "matchPackageNames": ["juju/juju"],
+      "allowedVersions": "<3.0.0",
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju agent"
     }, {
@@ -37,14 +36,16 @@
     {
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
       "matchStrings": ["- \"(?<currentValue>.*?)\" +# renovate: latest juju 2"],
-      "depNameTemplate": "juju/juju",
+      "depNameTemplate": "juju/juju2",
+      "packageNameTemplate": "juju/juju",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "loose",
       "extractVersionTemplate": "Juju release"
     }, {
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
       "matchStrings": ["- \"(?<currentValue>.*?)\" +# renovate: latest juju 3"],
-      "depNameTemplate": "juju/juju",
+      "depNameTemplate": "juju/juju3",
+      "packageNameTemplate": "juju/juju",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "loose",
       "extractVersionTemplate": "Juju release"
