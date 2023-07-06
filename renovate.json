@@ -16,11 +16,13 @@
     }, {
       "matchPackageNames": ["juju/juju"],
       "allowedVersions": "<3.0.0",
+      "matchCurrentVersion": "<3.0.0",
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju agent"
     }, {
       "matchPackageNames": ["juju/juju"],
       "allowedVersions": ">3.0.0",
+      "matchCurrentVersion": ">3.0.0",
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju agent"
     }, {
