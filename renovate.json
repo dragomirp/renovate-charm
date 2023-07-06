@@ -22,8 +22,8 @@
     }, {
       "matchManagers": ["regex"],
       "matchPackageNames": ["juju/juju"],
-      "matchCurrentVersion": "3\.\d\.\d$",
-      "allowedVersions": "3\.\d\.\d$"
+      "matchCurrentVersion": "3\\.\\d\\.\\d$",
+      "allowedVersions": "3\\.\\d\\.\\d$"
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju agent"
     }, {
