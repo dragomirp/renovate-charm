@@ -32,14 +32,14 @@
   "regexManagers": [
     {
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
-      "matchStrings": ["\\- \"(?<currentValue>.*?)\"\\] +# renovate: latest juju 2"],
+      "matchStrings": ["- \"(?<currentValue>.*?)\" +# renovate: latest juju 2"],
       "depNameTemplate": "juju/juju",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "loose",
       "extractVersionTemplate": "Juju release"
     }, {
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
-      "matchStrings": ["\\- \"(?<currentValue>.*?)\"\\] +# renovate: latest juju 3"],
+      "matchStrings": ["- \"(?<currentValue>.*?)\" +# renovate: latest juju 3"],
       "depNameTemplate": "juju/juju",
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "loose",
