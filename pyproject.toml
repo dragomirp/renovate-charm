@@ -7,7 +7,7 @@ license = "Apache-2.0"
 
 [tool.poetry.dependencies]
 python = "^3.8.10"
-ops = "2.3.0"
+ops = "2.4.1"
 leftpad = "0.1.2"
 
 [tool.poetry.group.format]
@@ -15,7 +15,7 @@ optional = true
 
 [tool.poetry.group.format.dependencies]
 black = "^23.0.0"
-ruff = "^0.0.274"
+ruff = "^0.0.277"
 
 [tool.poetry.group.lint]
 optional = true
@@ -38,7 +38,7 @@ optional = true
 lightkube = "^0.13.0"
 pytest = "^7.2.2"
 pytest-operator = "^0.28.0"
-juju = "2.9.42.2 || 3.1.0.1"  # renovate libjuju
+juju = "2.9.42.4 || 3.1.0.1"  # renovate libjuju
 psycopg2-binary = "2.9.6"
 
 # Testing tools configuration
