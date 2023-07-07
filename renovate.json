@@ -55,8 +55,14 @@
       "versioningTemplate": "loose",
       "extractVersionTemplate": "Juju release"
     }, {
-      "fileMatch": ["(^|/)pyproject\\.toml$"],
-      "matchStrings": ["juju = \"(?<currentValue>.*?) \\|\\| .*\" *# renovate libjuju"],
+      "fileMatch": [
+        "(^|/)pyproject\\.toml$",
+        "(^|/)tox\\.ini$"
+      ],
+      "matchStrings": [
+        "juju = \"(?<currentValue>.*?) \\|\\| .*\" *# renovate libjuju",
+        "LIBJUJU=\"(?<currentValue>.*?)\" *# libjuju2"
+      ],
       "depNameTemplate": "libjuju 2",
       "packageNameTemplate": "juju",
       "datasourceTemplate": "pypi",
