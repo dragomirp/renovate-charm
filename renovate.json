@@ -68,6 +68,19 @@
       "datasourceTemplate": "pypi",
       "versioningTemplate": "loose",
     }, {
+      "fileMatch": [
+        "(^|/)pyproject\\.toml$",
+        "(^|/)tox\\.ini$"
+      ],
+      "matchStrings": [
+        "juju = \".* \\|\\| (?<currentValue>.*?)\" *# renovate libjuju",
+        "LIBJUJU=\"(?<currentValue>.*?)\" *# libjuju3"
+      ],
+      "depNameTemplate": "libjuju 3",
+      "packageNameTemplate": "juju",
+      "datasourceTemplate": "pypi",
+      "versioningTemplate": "loose",
+    }, {
       "fileMatch": ["(^|/)([\\w-]*)charmcraft\\.ya?ml$"],
       "matchStrings": ["- (?<depName>.*?)==(?<currentValue>.*?) +# renovate"],
       "datasourceTemplate": "pypi",
