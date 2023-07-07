@@ -26,9 +26,15 @@
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju agent"
     }, {
+      "matchDepNames": ["libjuju 2"],
       "matchPackageNames": ["juju"],
       "matchDatasources": ["pypi"],
       "allowedVersions": "<3.0.0"
+    }, {
+      "matchDepNames": ["libjuju 3"],
+      "matchPackageNames": ["juju"],
+      "matchDatasources": ["pypi"],
+      "allowedVersions": "<3.2.0"
     }
   ],
   "regexManagers": [
@@ -48,6 +54,13 @@
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "loose",
       "extractVersionTemplate": "Juju release"
+    }, {
+      "fileMatch": ["(^|/)pyproject\\.toml$"],
+      "matchStrings": [juju = \"(?<currentValue>.*?) \|\| .*\" *# renovate libjuju],
+      "depNameTemplate": "libjuju 2",
+      "packageNameTemplate": "juju",
+      "datasourceTemplate": "pypi",
+      "versioningTemplate": "loose",
     }, {
       "fileMatch": ["(^|/)([\\w-]*)charmcraft\\.ya?ml$"],
       "matchStrings": ["- (?<depName>.*?)==(?<currentValue>.*?) +# renovate"],
