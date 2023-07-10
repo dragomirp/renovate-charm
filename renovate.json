@@ -27,19 +27,19 @@
       "extractVersion": "^juju-(?<version>.*)$",
       "groupName": "Juju 2"
     }, {
-      "matchDepNames": ["libjuju 2"],
-      "matchPackageNames": ["juju"],
-      "matchDatasources": ["pypi"],
-      "matchCurrentVersion": "2\\.\\d+\\.\\d+(\\.\\d+)?",
-      "allowedVersions": "2\\.\\d+\\.\\d+(\\.\\d+)?",
-      "groupName": "Juju 2"
-    }, {
       "matchDepNames": ["libjuju 3"],
       "matchPackageNames": ["juju"],
       "matchDatasources": ["pypi"],
       "matchCurrentVersion": "3\\.\\d+\\.\\d+(\\.\\d+)?",
       "allowedVersions": "3\\.\\d+\\.\\d+(\\.\\d+)?",
       "groupName": "Juju 3"
+    }, {
+      "matchDepNames": ["libjuju 2"],
+      "matchPackageNames": ["juju"],
+      "matchDatasources": ["pypi"],
+      "matchCurrentVersion": "2\\.\\d+\\.\\d+(\\.\\d+)?",
+      "allowedVersions": "2\\.\\d+\\.\\d+(\\.\\d+)?",
+      "groupName": "Juju 2"
     }, {
       "matchPackageNames": ["juju"],
       "matchDatasources": ["pypi"],
