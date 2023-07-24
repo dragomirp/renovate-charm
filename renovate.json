@@ -53,7 +53,6 @@
       "depNameTemplate": "Juju 2",
       "packageNameTemplate": "juju/juju",
       "datasourceTemplate": "github-releases",
-      "versioningTemplate": "loose",
       "extractVersionTemplate": "Juju release"
     }, {
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
@@ -61,7 +60,6 @@
       "depNameTemplate": "Juju 3",
       "packageNameTemplate": "juju/juju",
       "datasourceTemplate": "github-releases",
-      "versioningTemplate": "loose",
       "extractVersionTemplate": "Juju release"
     }, {
       "fileMatch": [
