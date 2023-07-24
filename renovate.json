@@ -52,15 +52,13 @@
       "matchStrings": ["- \"(?<currentValue>.*?)\" +# renovate: latest juju 2"],
       "depNameTemplate": "Juju 2",
       "packageNameTemplate": "juju/juju",
-      "datasourceTemplate": "github-releases",
-      "extractVersionTemplate": "Juju release"
+      "datasourceTemplate": "github-releases"
     }, {
       "fileMatch": ["^(workflow-templates|\\.github/workflows)/[^/]+\\.ya?ml$"],
       "matchStrings": ["- \"(?<currentValue>.*?)\" +# renovate: latest juju 3"],
       "depNameTemplate": "Juju 3",
       "packageNameTemplate": "juju/juju",
-      "datasourceTemplate": "github-releases",
-      "extractVersionTemplate": "Juju release"
+      "datasourceTemplate": "github-releases"
     }, {
       "fileMatch": [
         "(^|/)pyproject\\.toml$",
