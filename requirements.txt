@@ -1,9 +1,9 @@
 leftpad==0.1.2; python_full_version >= "3.8.10" and python_full_version < "4.0.0" \
     --hash=sha256:8ff2df0f8dbe6537d7f5f7cfb579b628ee81d02556971f2bb5992f6dffacc60e \
     --hash=sha256:e38a2ebc18e0ce3adb4116708c9d8b0ec1d15414eafa4d236be7db893e8dc911
-ops==2.4.1; python_full_version >= "3.8.10" and python_full_version < "4.0.0" \
-    --hash=sha256:9cd1a25c6ae30dc9f9afcbe87250f5349ff9a05d5b06632ad8111700c5f0db04 \
-    --hash=sha256:b5762bea03049ec150c6266833925d0bb36237b26b006ca878e74e24d162f981
+ops==2.5.0; python_full_version >= "3.8.10" and python_full_version < "4.0.0" \
+    --hash=sha256:3ffacae19e385765d8ce38c31f89c06552385fe871403e270ff7a255cc3e1fac \
+    --hash=sha256:7d8310c0324c8bcc4f54a93bf71e09b9b7f0842d07c0006e739410472dc7560c
 PyYAML==6.0.1; python_full_version >= "3.8.10" and python_full_version < "4.0.0" \
     --hash=sha256:062582fca9fabdd2c8b54a3ef1c978d786e0f6b3a1510e0ac93ef59e0ddae2bc \
     --hash=sha256:1635fd110e8d85d55237ab316b5b011de701ea0f29d07611174a1b42f1444741 \
