@@ -11,13 +11,20 @@ jobs:
   ci-tests:
     runs-on: ubuntu-latest
     steps:
-    - name: Initial disk space
-      run: df -h
-    - name: Cleanup
+    - name: Initial storage
       run: |
         sudo apt install curl lsb-release wget
         curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
         sudo deb-get install du-dust
-        dust /
-    - name: Final disk space
-      run: df -h
+        dust -P /
+    - name: Setup operator environment
+      uses: charmed-kubernetes/actions-operator@main
+      with:
+        provider: lxd
+        juju-channel: "2.9"
+    - name: After operator storage
+      run: |
+        sudo apt install curl lsb-release wget
+        curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+        sudo deb-get install du-dust
+        dust -P /
