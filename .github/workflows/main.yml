@@ -18,3 +18,4 @@ jobs:
         sudo deb-get install du-dust
         dust -Pc /mnt
         findmnt
+        df -h
