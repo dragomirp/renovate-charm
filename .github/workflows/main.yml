@@ -15,9 +15,7 @@ jobs:
       run: df -h
     - name: Cleanup
       run: |
-        sudo rm -rf /usr/share/dotnet
-        sudo rm -rf /opt/ghc
-        sudo rm -rf "/usr/local/share/boost"
-        sudo rm -rf "$AGENT_TOOLSDIRECTORY"
+        sudo deb-get install du-dust
+        dust /
     - name: Final disk space
       run: df -h
