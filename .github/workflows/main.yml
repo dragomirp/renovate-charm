@@ -16,18 +16,4 @@ jobs:
         sudo apt install curl lsb-release wget
         curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
         sudo deb-get install du-dust
-        dust -Pc /
-    - name: Setup operator environment
-      uses: charmed-kubernetes/actions-operator@main
-      with:
-        provider: lxd
-        juju-channel: "2.9"
-    - name: After operator storage
-      run: |
-        dust -Pc /
-    - name: Deploy landscape bundle
-      run: |
-        juju deploy ch:landscape-scalable
-    - name: After landscape storage
-      run: |
-        dust -Pc /
+        dust -Pc /mnt
