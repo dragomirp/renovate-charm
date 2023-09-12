@@ -15,7 +15,7 @@ optional = true
 
 [tool.poetry.group.format.dependencies]
 black = "^23.0.0"
-ruff = "^0.0.288"
+ruff = "^0.0.289"
 
 [tool.poetry.group.lint]
 optional = true
