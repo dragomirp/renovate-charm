@@ -7,7 +7,7 @@ license = "Apache-2.0"
 
 [tool.poetry.dependencies]
 python = "^3.8.10"
-ops = "2.7.0"
+ops = "2.8.0"
 leftpad = "0.1.2"
 
 [tool.poetry.group.format]
@@ -15,7 +15,7 @@ optional = true
 
 [tool.poetry.group.format.dependencies]
 black = "^23.0.0"
-ruff = "^0.0.292"
+ruff = "^0.1.0"
 
 [tool.poetry.group.lint]
 optional = true
