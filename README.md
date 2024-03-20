@@ -9,6 +9,7 @@ Use links instead.
 -->
 
 # renovate-charm
+TEST
 
 Charmhub package name: operator-template
 More information: https://charmhub.io/renovate-charm
